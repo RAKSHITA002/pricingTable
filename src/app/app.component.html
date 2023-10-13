@@ -1,0 +1,41 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<section class="pricing py-5">
+  <div class="container">
+    <div class="row">
+      <!-- method1 -->
+      <!--  <div class="col-lg-4">
+        <app-child price="0" title="FREE" [content1]="content[0].value1" [content2]="content[0].value2"
+          [content3]="content[0].value3" [content4]="content[0].value4" [content5]="content[0].value5"
+          [content6]="content[0].value6" [content7]="content[0].value7" [content8]="content[0].value8"></app-child>
+      </div>
+      <div class="col-lg-4">
+        <app-child price="9" title="PLUS" [content1]="content[1].value1" [content2]="content[1].value2"
+          [content3]="content[1].value3" [content4]="content[1].value4" [content5]="content[1].value5"
+          [content6]="content[1].value6" [content7]="content[1].value7" [content8]="content[1].value8"></app-child>
+      </div>
+      <div class="col-lg-4">
+        <app-child price="49" title="PRO" [content1]="content[2].value1" [content2]="content[2].value2"
+          [content3]="content[2].value3" [content4]="content[2].value4" [content5]="content[2].value5"
+          [content6]="content[2].value6" [content7]="content[2].value7" [content8]="content[2].value8"></app-child>
+      </div> -->
+      <div class="col-lg-4" *ngFor="let item of content" >
+        <!-- method2 -->
+        <!-- <app-child [price]="item.price" 
+                   [title]="item.title" 
+                   [content1]="item.value1" 
+                   [content2]="item.value2"
+                   [content3]="item.value3" 
+                   [content4]="item.value4"
+                   [content5]="item.value5"
+                   [content6]="item.value6"
+                   [content7]="item.value7"
+                  [content8]="item.value8">
+        </app-child> -->
+        <!-- method3 -->
+        <app-child
+        [contentObj] = "item">
+        </app-child>
+      </div>
+    </div>
+  </div>
+</section>
